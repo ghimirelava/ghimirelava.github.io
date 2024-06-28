@@ -5,35 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Web Developer</p>
-    </header>
     <nav>
+        <div class="logo">YN</div>
         <ul>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main>
+        <section id="home">
+            <h1>Your Name</h1>
+            <p>Web Developer & Designer</p>
+        </section>
         <section id="about">
             <h2>About Me</h2>
-            <p>Brief introduction about yourself goes here.</p>
+            <p>Your compelling personal story and professional summary go here.</p>
         </section>
         <section id="projects">
             <h2>My Projects</h2>
             <div id="project-list"></div>
         </section>
         <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Your contact information or a contact form could go here.</p>
+            <h2>Get in Touch</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
