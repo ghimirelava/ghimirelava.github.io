@@ -3,14 +3,15 @@ interface Project {
     title: string;
     description: string;
     image: string;
-    link: string;
+    languages: string[];
 }
 
 class Website {
     private projects: Project[] = [
-        { id: 1, title: "Project 1", description: "A brief description of project 1", image: "project1.jpg", link: "#" },
-        { id: 2, title: "Project 2", description: "A brief description of project 2", image: "project2.jpg", link: "#" },
-        { id: 3, title: "Project 3", description: "A brief description of project 3", image: "project3.jpg", link: "#" },
+        { id: 1, title: "Project 1", description: "A brief description of project 1", image: "project1.jpg", languages: ["JavaScript", "HTML", "CSS"] },
+        { id: 2, title: "Project 2", description: "A brief description of project 2", image: "project2.jpg", languages: ["Python", "Django"] },
+        { id: 3, title: "Project 3", description: "A brief description of project 3", image: "project3.jpg", languages: ["React", "Node.js"] },
+        { id: 4, title: "Project 4", description: "A brief description of project 4", image: "project4.jpg", languages: ["Vue.js", "Express"] },
     ];
 
     constructor() {
@@ -22,9 +23,6 @@ class Website {
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', this.handleNavClick.bind(this));
         });
-
-        const contactForm = document.getElementById('contact-form') as HTMLFormElement;
-        contactForm.addEventListener('submit', this.handleFormSubmit.bind(this));
     }
 
     private handleNavClick(e: Event): void {
@@ -44,24 +42,13 @@ class Website {
                     <img src="${project.image}" alt="${project.title}">
                     <h3>${project.title}</h3>
                     <p>${project.description}</p>
-                    <a href="${project.link}" target="_blank">View Project</a>
+                    <div class="languages">
+                        ${project.languages.map(lang => `<span class="language">${lang}</span>`).join('')}
+                    </div>
                 `;
                 projectList.appendChild(projectElement);
             });
         }
-    }
-
-    private handleFormSubmit(e: Event): void {
-        e.preventDefault();
-        const form = e.target as HTMLFormElement;
-        const name = (form.elements.namedItem('name') as HTMLInputElement).value;
-        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
-        const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
-
-        // Here you would typically send this data to a server
-        console.log(`Received message from ${name} (${email}): ${message}`);
-        alert('Thank you for your message! I will get back to you soon.');
-        form.reset();
     }
 }
 

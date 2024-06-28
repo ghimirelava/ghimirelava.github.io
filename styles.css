@@ -66,15 +66,22 @@ section {
 
 #project-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .project img {
@@ -85,45 +92,25 @@ section {
 
 .project h3 {
     padding: 15px;
+    font-weight: bold;
 }
 
 .project p {
     padding: 0 15px 15px;
 }
 
-.project a {
+.languages {
+    padding: 0 15px 15px;
+}
+
+.language {
     display: inline-block;
-    margin: 15px;
-    padding: 10px 15px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 3px;
-}
-
-#contact form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#contact input,
-#contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-}
-
-#contact button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    font-size: 0.9em;
 }
 
 footer {
@@ -131,4 +118,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    #project-list {
+        grid-template-columns: 1fr;
+    }
 }
