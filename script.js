@@ -1,9 +1,9 @@
 var Website = /** @class */ (function () {
     function Website() {
         this.projects = [
-            { id: 1, title: "Search Engine: Fetch", description: "Fetch is a full-stack search engine and web crawler that enables users to search for terms across public websites. The project was developed with Golang and SQL, incorporating custom data structures and TF-IDF scores to generate diverse statistics for the user.", image: "project2.jpg", languages: ["Golang", "SQL", "Web Crawling"] },
-            { id: 2, title: "Web Application Frontend", description: "Duets.AI is a language learning startup that utilizes AI to provide personalized feedback and exercises from Zoom tutoring sessions. I was one of the two front-end developers who designed and developed the frontend from scratch. Emphasis was placed on ensuring a seamless user interface and working with the back end team to integrate dynamic data through custom API calls to establish the websites core functionalities in 4 months.", image: "project3.jpg", languages: ["Bubble.io", "HTML", "Azure"] },
-            { id: 3, title: "Project 3", description: "A brief description of project 3", image: "project2.jpg", languages: ["JavaScript", "HTML", "CSS"] },
+            { id: 1, title: "Search Engine: Fetch", description: "Fetch is a full-stack search engine and web crawler that enables users to search for terms across public websites. The project was developed with Golang and SQL, incorporating custom data structures and TF-IDF scores to generate diverse statistics for the user.", image: "fetch.jpg", languages: ["Golang", "SQL", "Web Crawling"] },
+            { id: 2, title: "Web Application Frontend", description: "Duets.AI is a language learning startup that utilizes AI to provide personalized feedback and exercises from Zoom tutoring sessions. I was one of the two front-end developers who designed and developed the frontend from scratch. Emphasis was placed on ensuring a seamless user interface and working with the back end team to integrate dynamic data through custom API calls to establish the websites core functionalities in 4 months.", image: "duets.jpg", languages: ["Bubble.io", "HTML", "Azure"] },
+            { id: 3, title: "Project 3", description: "A brief description of project 3", image: "project3.jpg", languages: ["JavaScript", "HTML", "CSS"] },
             { id: 4, title: "Project 4", description: "A brief description of project 4", image: "project4.jpg", languages: ["Bubble.io", "HTML", "Adjuer"] },
         ];
         this.initializeEventListeners();
