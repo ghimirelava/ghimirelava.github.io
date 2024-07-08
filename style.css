@@ -45,12 +45,12 @@ nav ul li a {
 hr.soild { 
     /* display: block;
     Solid border */
-    border-top: 1px solid #bbb;
+    border-top: 0.5px solid #bbb;
     margin-top: 0.5em;
     margin-bottom: 2.0em;
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: auto;
-    /* border-style: inset;*/
+    border-style: inset;*/
   } 
 
 main {
