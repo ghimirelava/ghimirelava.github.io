@@ -42,6 +42,16 @@ nav ul li a {
     color: #333;
 }
 
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  } 
+
 main {
     padding-top: 60px;
     max-width: 1200px;
