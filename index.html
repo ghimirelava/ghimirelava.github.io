@@ -3,40 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lava Ghimire - Personal Website</title>
+    <title>Lava Ghimire | NYU Computer Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="grain-overlay"></div>
+    
     <nav>
-        <div class="logo">Lava Ghimire</div>
+        <div class="logo"><span class="pixel">L</span>ava <span class="pixel">G</span>himire</div>
         <ul>
-            <li><a href="#home">About Me</a></li>
-            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#home">About</a></li>
+            <li><a href="#projects">Work</a></li>
         </ul>
     </nav>
+
     <main>
         <section id="home">
-            <div class="home-content">
-                <div class="home-text">
-                    <h1>Hi I’m Lava,</h1>
-                    <p>I am a Software Engineer and recent Computer Science Grad from the University of San Francisco. Here you can find recent projects I’ve worked on. </p>
-                    <div class="home-buttons">
-                        <a href="https://www.linkedin.com/in/lava-ghimire-0b913b1b0" target="_blank" class="btn">Connect</a>
-                        <a href="public/content/ResumeLavaGhimire.docx.pdf" target="_blank" class="btn">Resume</a>
-                    </div>
-                </div>
-                <div class="home-image">
-                    <img src="public/content/headshot.jpeg" alt="Lava Ghimire">
+        <div class="home-content">
+            <div class="home-text">
+                <h1 class="editorial-title">
+                    Computer <br>
+                    Engineering @ <br>
+                    NYU Tandon
+                </h1>
+                <p class="bio">
+                    First-year Master's student and Software Engineer. <br>
+                    Focusing on high-performance systems and the <br>
+                    intersection of <strong>design and logic</strong>.
+                </p>
+                <div class="home-buttons">
+                    <a href="https://www.linkedin.com/..." target="_blank" class="btn">Connect</a>
+                    <a href="resume.pdf" target="_blank" class="btn">Resume</a>
                 </div>
             </div>
-        </section>
-            <section id="projects">
-                    <h1>
-                        <h1>Projects</h1>
-                            <hr class="soild">
-                            <div id="project-list"></div>
-                    </h1>
+            <div class="home-image">
+                <img src="public/content/headshot.jpeg" alt="Lava Ghimire">
+            </div>
+        </div>
+    </section>
+
+        <section id="projects">
+            <h2 class="section-title"><span class="pixel">S</span>elected <span class="pixel">W</span>ork</h2>
+            <div id="project-list">
+                </div>
         </section>
     </main>
     <script src="script.js"></script>
