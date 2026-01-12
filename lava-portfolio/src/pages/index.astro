@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectsGrid from "../components/ProjectsGrid.jsx";
+import SectionHeader from "../components/SectionHeader.astro";
+---
+
+<Layout title="Lava Ghimire">
+  <main class="mx-auto max-w-5xl px-6 py-16">
+    <!-- HERO -->
+    <section class="mb-16">
+      <p class="mb-3 text-sm text-zinc-600">
+        Computer Engineering @ NYU • Backend + Embedded
+      </p>
+
+      <h1 class="font-serif text-5xl leading-tight">
+        Lava <span class="text-accent-500">Ghimire</span>
+      </h1>
+
+      <p class="mt-4 max-w-2xl text-lg text-zinc-700">
+        I build reliable systems—from Laravel APIs to embedded sensing and ML prototypes.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="#projects"
+          class="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-medium text-zinc-50 hover:opacity-90"
+        >
+          View Projects
+        </a>
+        <a
+          href="/resume.pdf"
+          class="rounded-xl border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:border-zinc-400"
+        >
+          Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="mb-16">
+      <SectionHeader title="Experience" />
+      <div class="grid gap-4">
+        <article class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="text-lg font-semibold">Timeacle — Software Engineer Intern</h3>
+            <p class="text-sm text-zinc-500">Jan 2025 – Jul 2025</p>
+          </div>
+          <p class="mt-2 text-zinc-700">
+            Built and tested Laravel APIs powering an automated telephone booking system.
+          </p>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-zinc-700">
+            <li>Designed Laravel REST APIs for authentication + microservice data flow</li>
+            <li>Built documented endpoints connecting frontend ↔ database layers</li>
+            <li>Wrote Pest unit tests and validated performance with Postman</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            {["Laravel", "REST", "Pest", "Postman", "Microservices"].map((t) => (
+              <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1">{t}</span>
+            ))}
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="text-lg font-semibold">DuetsAI — Web Design Intern</h3>
+            <p class="text-sm text-zinc-500">Jan 2024 – May 2024</p>
+          </div>
+          <p class="mt-2 text-zinc-700">
+            Led the design + development of a language-learning web app focused on user workflows.
+          </p>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-zinc-700">
+            <li>Created detailed workflows and designed clean, intuitive interfaces</li>
+            <li>Collaborated on custom APIs + Azure database integration</li>
+            <li>Supported dynamic, real-time content updates across the app</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            {["UI/UX", "Workflows", "APIs", "Azure"].map((t) => (
+              <span class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1">{t}</span>
+            ))}
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mb-16">
+      <SectionHeader title="Projects" />
+      <ProjectsGrid client:load />
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <SectionHeader title="Contact" />
+      <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <p class="text-zinc-700">Email me or connect:</p>
+        <div class="mt-4 flex flex-wrap gap-3 text-sm">
+          <a class="underline decoration-accent-500/40 hover:decoration-accent-500" href="mailto:lg3323@nyu.edu">
+            lg3323@nyu.edu
+          </a>
+          <a class="underline decoration-accent-500/40 hover:decoration-accent-500" href="https://github.com/ghimirelava">
+            GitHub
+          </a>
+          <a class="underline decoration-accent-500/40 hover:decoration-accent-500" href="https://linkedin.com/in/lavaghimire">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
