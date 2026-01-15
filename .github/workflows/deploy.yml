@@ -1,30 +1,32 @@
-name: Deploy Astro Site
+name: Deploy Astro Portfolio
 
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main   # Change if your default branch is not main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: github-pages  # this is required
+      name: github-pages   # Required for deploy-pages action
 
     steps:
+      # 1 Checkout the repo
       - uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      # 2Setup Node.js
+      - uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
+      # 3 Install dependencies
+      - run: npm install
 
-      - name: Build
-        run: npm run build
+      # 4 Build Astro site
+      - run: npm run build
 
+      # 5 Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
