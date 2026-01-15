@@ -6,15 +6,11 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 
 // https://astro.build/config
-/*export default defineConfig({
+export default defineConfig({
+  site: "https://ghimirelava.github.io",
+  base: "/",
   vite: {
     plugins: [tailwindcss()]
   },
-
   integrations: [react()]
-});*/
-
-export default {
-  site: "https://ghimirelava.github.io",
-  base: "/",
-};
+});
